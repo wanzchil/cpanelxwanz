@@ -188,7 +188,7 @@ async function handlePanelSubmit(e) {
   showResult(resultBox, "Membuat panel...", "loading");
 
   try {
-    const res = await fetch("https://solid-hammerhead-petalite.glitch.me/create", {
+    const res = await fetch("http://cicakgoreng.berak.web.id:2100/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, email, ram, disk, cpu })
@@ -249,7 +249,7 @@ async function handleAdminSubmit(e) {
   showResult(resultBox, "Membuat admin...", "loading");
 
   try {
-    const res = await fetch("https://solid-hammerhead-petalite.glitch.me/create-admin", {
+    const res = await fetch("http://cicakgoreng.berak.web.id:2100/create-admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, email })
@@ -304,7 +304,7 @@ async function fetchServers() {
   `;
 
   try {
-    const res = await fetch("https://solid-hammerhead-petalite.glitch.me/servers");
+    const res = await fetch("http://cicakgoreng.berak.web.id:2100/servers");
     const servers = await res.json();
     
     if (!Array.isArray(servers)) {
@@ -364,7 +364,7 @@ async function deleteServer(id) {
   }
 
   try {
-    const res = await fetch(`https://solid-hammerhead-petalite.glitch.me/server/${id}`, {
+    const res = await fetch(`http://cicakgoreng.berak.web.id:2100/server/${id}`, {
       method: "DELETE"
     });
 
@@ -407,7 +407,7 @@ async function fetchAdmins() {
   `;
 
   try {
-    const res = await fetch("https://solid-hammerhead-petalite.glitch.me/admins");
+    const res = await fetch("http://cicakgoreng.berak.web.id:2100/admins");
     const admins = await res.json();
     
     if (!Array.isArray(admins)) {
@@ -468,7 +468,7 @@ async function deleteAdmin(id) {
   }
 
   try {
-    const res = await fetch(`https://solid-hammerhead-petalite.glitch.me/admin/${id}`, {
+    const res = await fetch(`http://cicakgoreng.berak.web.id:2100/admin/${id}`, {
       method: "DELETE"
     });
 
